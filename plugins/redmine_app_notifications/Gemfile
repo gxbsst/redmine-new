@@ -1,0 +1,5 @@
+gem 'private_pub', :github => 'tigergm/rm_private_pub'
+gem 'thin'
+group :test do
+	gem "factory_girl", "~> 4.0"
+end

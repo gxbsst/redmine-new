@@ -1,0 +1,11 @@
+error:
+  name: error
+  
+feature:
+  name: New feature
+  
+bug:
+  name: bug
+  
+question:
+  name: question

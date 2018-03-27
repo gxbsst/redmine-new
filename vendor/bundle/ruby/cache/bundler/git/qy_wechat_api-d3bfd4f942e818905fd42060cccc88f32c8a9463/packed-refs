@@ -1,0 +1,7 @@
+# pack-refs with: peeled fully-peeled 
+aea6f101c91615fa8b2a6dd6f78f764588f6e10d refs/heads/add-material-api
+ad2ebd544d27a51cf1b3a4eb11b04326e47f00be refs/heads/develop
+74a63ecaa9b54e069e17768f5b6e5b045f0baa8a refs/heads/master
+de47dcc60839ad17dd0300f4082e3b1edcafab92 refs/heads/send-message
+6074d1dee5188f8a0e822ff8a22e9da71fbdd51b refs/tags/v1.0.0.beta1
+^7df66e2f8cce298c398f2095ab95b18b33339242

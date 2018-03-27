@@ -1,0 +1,32 @@
+<% content_for :header_tags do %>
+<%= javascript_include_tag :private_pub, :plugin => 'redmine_app_notifications', media: 'all', 'data-turbolinks-track' => true  %>
+	<%= javascript_include_tag "app_notifications", :plugin => "redmine_app_notifications" %>
+    <%= stylesheet_link_tag "app_notifications", :plugin => "redmine_app_notifications" %>
+	    <script>
+			function getIssueIdFromMessage(message)
+			{
+				return message.match(/#(\d+)/)[1];
+			}
+
+			function showNotification(data)
+			{
+				var notification = new Notification("Redmine", { "tag": "notification-"+getIssueIdFromMessage(data.message), "body": data.message, "icon": data.avatar });
+				notification.onclick = function(x) {
+					window.focus();
+					var issueId = getIssueIdFromMessage(this.body);
+					this.close();
+					location.href = "<%= url_for(:controller => 'app_notifications', :action => 'index') %>/"+data.id+"?issue_id="+issueId;
+				 };
+			}
+
+		    $(document).ready(function()
+				{
+					try {
+						var client = new Faye.Client("<%= Setting.plugin_redmine_app_notifications['faye_server_adress'] %>");
+					} catch(e) {
+						$("#notificationsLink").parent().after("<li><span class=\"notification-title\">(<%= l(:unreachable_faye_server) %>)</span></li>");
+						return true;
+					}
+			});
+		</script>
+<% end %>

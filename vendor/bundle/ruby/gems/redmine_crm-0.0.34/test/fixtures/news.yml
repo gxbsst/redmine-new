@@ -1,0 +1,8 @@
+first_news:
+  title: News 1 title
+  description: Some description for the news 1
+  author: jonathan
+second_news:
+  title: News 2 title
+  description: Some description for the news 2
+  author: sam

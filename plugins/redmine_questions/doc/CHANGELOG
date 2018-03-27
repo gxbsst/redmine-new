@@ -1,0 +1,26 @@
+== Redmine Q&A plugin changelog
+
+Redmine Q&A plugin
+Copyright (C) 2011-2016 Kirill Bezrukov
+http://www.redminecrm.com/
+
+== 2016-01-18 v0.0.7
+
+* Chinese translation (zhoutt)
+* Redmine 3+ support
+
+== 2014-02-04 v0.0.6
+
+* Redmine 2.4 support
+* View count fixes for topic
+* Topic count fixed in boards view
+
+== 2013-05-28 v0.0.5
+
+* Redmine 2.3 support
+* Search by all words
+
+== 2013-01-20 v0.0.3
+
+* Redmine 2.2.0 support
+* License files
