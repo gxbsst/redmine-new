@@ -1,0 +1,21 @@
+mysql:
+  :adapter: mysql2
+  :host: localhost
+  :username: root
+  :password: 1
+  :database: rails_plugin_test
+
+sqlite3:
+  :adapter: sqlite3
+  :database: ':memory:'
+
+postgresql:
+  :adapter: postgresql
+  :database: rails_plugin_test
+  :user: container
+  :password: 1
+  :host: localhost
+
+default_env:
+  adapter: sqlite3
+  database: ':memory:'

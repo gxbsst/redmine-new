@@ -1,0 +1,22 @@
+%table{ class: 'table table-hover' }
+  %thead
+    %tr
+      %th= l(:label_build_number)
+      %th= l(:label_build_result)
+      %th= l(:label_finished_at)
+
+  %tbody
+    - builds.each do |build|
+      %tr
+        %td
+          %span{ class: 'label label-info' }= link_to "##{build.number}", build.url
+
+        %td
+          %span{ class: "label label-#{state_to_css_class(build.result)}" }= build.result.capitalize
+
+          - if build.result == 'running'
+            %span{ class: 'icon icon-running' }
+
+        %td= format_time build.finished_at
+
+= paginate builds, params: { controller: 'jenkins_jobs', action: 'history' }

@@ -1,0 +1,93 @@
+== Redmine CRM gem changelog
+
+Redmine crm gem - general functions for plugins (tags, vote, viewing, currency)
+Copyright (C) 2011-2017 RedmineUP
+https://www.redmineup.com/
+
+== 2017-12-22 v0.0.34
+
+* Fixed bug with Redmine 2.x support
+
+== 2017-12-18 v0.0.33
+
+* Rails 5 support (Redmine 4)
+* rcrm_acts_as_list (Redmine 4)
+* Bitcoin currency support
+
+== 2017-07-18 v0.0.32
+
+* charjs added
+
+== 2017-05-29 v0.0.31
+
+* select2 controls for contacts and people
+
+== 2017-05-23 v0.0.30
+
+* Fixed votable vote_by
+
+== 2017-03-21 v0.0.29
+
+* Updated available_tags method 
+
+== 2017-03-17 v0.0.28
+
+* Fixed bug with quote_value
+
+== 2017-03-13 v0.0.27
+
+* Added IP to Votes
+
+== 2017-03-10 v0.0.26
+
+* Liquid gem with base filters and drops for Redmine objects
+
+== 2016-11-12 v0.0.24
+
+* Liquid gem dependency
+
+== 2016-09-28 v0.0.23
+
+* Changed RUB sybmol
+* Added BYN currency
+
+== 2015-12-13 v0.0.22
+
+* Added a count for unique views of a object.
+
+== 2015-10-29 v0.0.21
+
+* Added space for CHF in currency format
+* Changed collection_for_currencies_select helper for major currencies
+
+== 2015-10-29 v0.0.20
+
+* Added checking for vesion format in requires_redmine_crm
+
+== 2015-10-29 v0.0.19
+
+* New requires_redmine_crm params format and error messages
+
+== 2015-10-28 v0.0.18
+
+* Rename 'requires_version' to 'requires_redmine_crm'
+
+== 2015-10-09 v0.0.17
+
+* Added js and css for tags
+* Added function 'requires_version' for check version of gem from Redmine plugin
+
+== 2015-09-26 v0.0.16
+
+* Totally remove dependency from Contact plugin
+
+== 2015-09-24 v0.0.15
+
+* Fixed bug for available tag when model not have a relation with a project
+* Added transfer of parameters for formatting a price
+
+== 2015-09-23 v0.0.14
+
+* Fixed bug in viewed? function
+* Add check for existing columns in table for votes
+* Fixed bug with thousands delimiter

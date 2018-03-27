@@ -1,0 +1,31 @@
+ 	<%= subscribe_to "/notifications/private/#{User.current.id}", User.current, @project %>
+  				<script>
+				  	PrivatePub.subscribe('/notifications/private/<%= User.current.id %>', function(data, channel)
+				    {
+					if($("#notification_count").length == 0) {
+						$("#notificationsLink").parent().after("<li><span id='notification_count'></span></li>");
+					}
+					$("#notification_count").text(data.count);
+					var useDesktopNotifications = false;
+					<% if User.current.app_notification_desktop %>
+					useDesktopNotifications = true;
+					<% end %>
+
+					if (!("Notification" in window) || !useDesktopNotifications) {
+					    $(document.body).append("<div class='push-notification hide' id='notification-" + data.id + "'>" + data.message + "</div>");
+					    $("#notification-" + data.id).fadeIn('fast').delay(10000).fadeOut(1200, function() {
+						$("#notification-" + data.id).remove();
+					    });
+					}
+					else {
+					    if (Notification.permission === "granted")
+							showNotification(data);
+						else if (Notification.permission !== "denied") {
+							Notification.requestPermission(function(permission) {
+								if (permission === "granted")
+									showNotification(data);
+							});
+						}
+					}
+				});
+			</script>

@@ -1,0 +1,108 @@
+# encoding: utf-8
+# English strings go here for Rails i18n
+en:
+  label_questions: 'Help & Support'
+  label_questions_search: 'Search for a specific question, answer or topic ...'
+  label_questions_new: New question
+  label_questions_message: Message
+  label_questions_added_time: "Added %{value} ago"
+  label_questions_related_messages: Related messages
+  label_questions_latest_messages: Latest messages
+  label_questions_views: '%{count} views'
+  label_questions_votes: '%{count} votes'
+  label_questions_answers: '%{count} answers'
+  label_questions_tags: Tags
+  label_questions_tagged_by: '%{count} topic(s) tagged by %{tag}'
+  label_questions_sidebar_message: Sidebar message
+  label_questions_notice: Notice
+  label_questions_most_voted: Most voted
+
+  button_questions_vote: Vote
+  button_questions_unvote: Unvote
+  button_questions_like: Like
+  button_questions_unlike: Unlike
+
+  field_questions_tags: Tags
+
+  permission_view_questions: View Help & Support
+  permission_edit_messages_tags: Edit tags
+  permission_edit_vote_messages: Vote messages
+
+  i18n:
+    transliterate:
+      rule:
+        і: 'i'
+        ґ: 'g'
+        ё: 'yo'
+        №: '#'
+        є: 'e'
+        ї: 'yi'
+        а: 'a'
+        б: 'b'
+        в: 'v'
+        г: 'g'
+        д: 'd'
+        е: 'e'
+        ж: 'zh'
+        з: 'z'
+        и: 'i'
+        й: 'y'
+        к: 'k'
+        л: 'l'
+        м: 'm'
+        н: 'n'
+        о: 'o'
+        п: 'p'
+        р: 'r'
+        с: 's'
+        т: 't'
+        у: 'u'
+        ф: 'f'
+        х: 'h'
+        ц: 'ts'
+        ч: 'ch'
+        ш: 'sh'
+        щ: 'sch'
+        ъ: ''
+        ы: 'y'
+        ь: ''
+        э: 'e'
+        ю: 'yu'
+        я: 'ya'
+        "Ґ": "G"
+        "Ё": "YO"
+        "Є": "E"
+        "Ї": "YI"
+        "І": "I"
+        "А": "A"
+        "Б": "B"
+        "В": "V"
+        "Г": "G"
+        "Д": "D"
+        "Е": "E"
+        "Ж": "ZH"
+        "З": "Z"
+        "И": "I"
+        "Й": "Y"
+        "К": "K"
+        "Л": "L"
+        "М": "M"
+        "Н": "N"
+        "О": "O"
+        "П": "P"
+        "Р": "R"
+        "С": "S"
+        "Т": "T"
+        "У": "U"
+        "Ф": "F"
+        "Х": "H"
+        "Ц": "TS"
+        "Ч": "CH"
+        "Ш": "SH"
+        "Щ": "SCH"
+        "Ъ": "'"
+        "Ы": "Y"
+        "Ь": ""
+        "Э": "E"
+        "Ю": "YU"
+        "Я": "YA"

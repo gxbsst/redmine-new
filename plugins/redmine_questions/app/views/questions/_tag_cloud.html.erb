@@ -1,0 +1,35 @@
+<%
+    limit = 30
+
+    scope = RedmineCrm::Tag.where({})
+    scope = scope.where("#{Project.table_name}.id = ?", @project) if @project
+    scope = scope.where(Project.allowed_to_condition(User.current, :view_messages))
+
+
+    join = []
+    join << "JOIN #{RedmineCrm::Tagging.table_name} ON #{RedmineCrm::Tagging.table_name}.tag_id = #{RedmineCrm::Tag.table_name}.id "
+    join << "JOIN #{Message.table_name} ON #{Message.table_name}.id = #{RedmineCrm::Tagging.table_name}.taggable_id AND #{RedmineCrm::Tagging.table_name}.taggable_type =  '#{Message.name}' "
+    join << "JOIN #{Board.table_name} ON #{Board.table_name}.id = #{Message.table_name}.board_id"
+    join << "JOIN #{Project.table_name} ON #{Project.table_name}.id = #{Board.table_name}.project_id"
+
+    group_fields = ""
+    group_fields << ", #{RedmineCrm::Tag.table_name}.created_at" if RedmineCrm::Tag.respond_to?(:created_at)
+    group_fields << ", #{RedmineCrm::Tag.table_name}.updated_at" if RedmineCrm::Tag.respond_to?(:updated_at)
+
+    scope = scope.joins(join.join(' '))
+    scope = scope.select("#{RedmineCrm::Tag.table_name}.*, COUNT(DISTINCT #{RedmineCrm::Tagging.table_name}.taggable_id) AS count")
+    scope = scope.group("#{RedmineCrm::Tag.table_name}.id, #{RedmineCrm::Tag.table_name}.name #{group_fields} HAVING COUNT(*) > 0")
+    scope = scope.order("#{RedmineCrm::Tag.table_name}.name")
+    scope = scope.limit(limit) if limit
+    @available_tags = scope
+ %>
+
+<h3><%= l(:label_questions_tags) %></h3>
+<ul class="questions-tags">
+    <% @available_tags.each do |tag| %>
+    <li>
+      <%= link_to tag, {:controller => "questions", :action => "topics", :project_id => @project, :tag => tag.name} %>
+      <span class="count"><%= tag.count %></span>
+    </li>
+    <% end if @available_tags %>
+</ul>

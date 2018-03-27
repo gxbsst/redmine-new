@@ -1,0 +1,32 @@
+tag_for_error:
+  tag: error
+  taggable: first_issue (Issue)
+  created_at: 2014-01-01
+tag_for_error1:
+  tag: error
+  taggable: second_issue (Issue)
+  created_at: 2015-01-01
+tag_for_error2:
+  tag: error
+  taggable: third_issue (Issue)
+  created_at: 2015-01-01
+tag_for_feature:
+  tag: feature
+  taggable: second_issue (Issue)
+  created_at: 2015-01-01
+tag_for_bug:
+  tag: bug
+  taggable: second_issue (Issue)
+  created_at: 2015-01-01
+tag_for_question1:
+  tag: question
+  taggable: third_issue (Issue)
+  created_at: 2015-01-01
+tag_for_question2:
+  tag: question
+  taggable: first_issue (Issue)
+  created_at: 2015-01-01
+tag_for_question3:
+  tag: question
+  taggable: second_issue (Issue)
+  created_at: 2015-02-01

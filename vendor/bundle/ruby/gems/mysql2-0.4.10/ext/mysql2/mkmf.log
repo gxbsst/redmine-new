@@ -1,0 +1,618 @@
+have_func: checking for rb_absint_size()... -------------------- no
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: 在函数‘t’中:
+conftest.c:5:57: 错误：‘rb_absint_size’未声明(在此函数内第一次使用)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_absint_size; return 0; }
+                                                         ^
+conftest.c:5:57: 附注：每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:32: 警告：变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_absint_size; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_absint_size; return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告：隐式声明函数‘rb_absint_size’ [-Wimplicit-function-declaration]
+ int t(void) { rb_absint_size(); return 0; }
+ ^
+/tmp/ccGP7DsK.o：在函数‘t’中：
+/root/redmine/vendor/bundle/ruby/gems/mysql2-0.4.10/ext/mysql2/conftest.c:5：对‘rb_absint_size’未定义的引用
+collect2: 错误：ld 返回 1
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { rb_absint_size(); return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+--------------------
+
+have_func: checking for rb_absint_singlebit_p()... -------------------- no
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: 在函数‘t’中:
+conftest.c:5:57: 错误：‘rb_absint_singlebit_p’未声明(在此函数内第一次使用)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_absint_singlebit_p; return 0; }
+                                                         ^
+conftest.c:5:57: 附注：每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:32: 警告：变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_absint_singlebit_p; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_absint_singlebit_p; return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告：隐式声明函数‘rb_absint_singlebit_p’ [-Wimplicit-function-declaration]
+ int t(void) { rb_absint_singlebit_p(); return 0; }
+ ^
+/tmp/cckqsrF3.o：在函数‘t’中：
+/root/redmine/vendor/bundle/ruby/gems/mysql2-0.4.10/ext/mysql2/conftest.c:5：对‘rb_absint_singlebit_p’未定义的引用
+collect2: 错误：ld 返回 1
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { rb_absint_singlebit_p(); return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+--------------------
+
+have_header: checking for ruby/thread.h... -------------------- yes
+
+"gcc -E -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/thread.h>
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_call_without_gvl() in ruby/thread.h... -------------------- yes
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: 在函数‘t’中:
+conftest.c:7:32: 警告：变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_without_gvl; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby/thread.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_without_gvl; return 0; }
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     printf("%p", &t);
+12:   }
+13: 
+14:   return 0;
+15: }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_blocking_region()... -------------------- yes
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告：不建议使用‘rb_thread_blocking_region’(声明于 /usr/include/ruby/intern.h:841) [-Wdeprecated-declarations]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return 0; }
+ ^
+conftest.c:5:32: 警告：变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+--------------------
+
+have_func: checking for rb_wait_for_single_fd()... -------------------- yes
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: 在函数‘t’中:
+conftest.c:5:57: 错误：‘rb_wait_for_single_fd’未声明(在此函数内第一次使用)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_wait_for_single_fd; return 0; }
+                                                         ^
+conftest.c:5:57: 附注：每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:32: 警告：变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_wait_for_single_fd; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_wait_for_single_fd; return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告：隐式声明函数‘rb_wait_for_single_fd’ [-Wimplicit-function-declaration]
+ int t(void) { rb_wait_for_single_fd(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { rb_wait_for_single_fd(); return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+--------------------
+
+have_func: checking for rb_hash_dup()... -------------------- yes
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: 在函数‘t’中:
+conftest.c:5:32: 警告：变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_hash_dup; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_hash_dup; return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+--------------------
+
+have_func: checking for rb_intern3()... -------------------- yes
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: 在函数‘t’中:
+conftest.c:5:57: 错误：‘rb_intern3’未声明(在此函数内第一次使用)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_intern3; return 0; }
+                                                         ^
+conftest.c:5:57: 附注：每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:32: 警告：变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_intern3; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_intern3; return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告：隐式声明函数‘rb_intern3’ [-Wimplicit-function-declaration]
+ int t(void) { rb_intern3(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { rb_intern3(); return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+--------------------
+
+have_func: checking for rb_big_cmp()... -------------------- yes
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64   -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: 在函数‘t’中:
+conftest.c:5:32: 警告：变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_big_cmp; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_big_cmp; return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+--------------------
+
+have_header: checking for mysql.h... -------------------- yes
+
+"gcc -E -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+/* end */
+
+--------------------
+
+have_header: checking for errmsg.h... -------------------- yes
+
+"gcc -E -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <errmsg.h>
+/* end */
+
+--------------------
+
+have_const: checking for SSL_MODE_DISABLED in mysql.h... -------------------- no
+
+"gcc -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -m64  -c conftest.c"
+conftest.c:7:34: 错误：‘SSL_MODE_DISABLED’未声明(不在函数内)
+ conftest_type conftestval = (int)SSL_MODE_DISABLED;
+                                  ^
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SSL_MODE_DISABLED;
+/* end */
+
+--------------------
+
+have_const: checking for MYSQL_OPT_SSL_ENFORCE in mysql.h... -------------------- no
+
+"gcc -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -m64  -c conftest.c"
+conftest.c:7:34: 错误：‘MYSQL_OPT_SSL_ENFORCE’未声明(不在函数内)
+ conftest_type conftestval = (int)MYSQL_OPT_SSL_ENFORCE;
+                                  ^
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)MYSQL_OPT_SSL_ENFORCE;
+/* end */
+
+--------------------
+
+have_struct_member: checking for MYSQL.net.vio in mysql.h... -------------------- yes
+
+"gcc -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT -m64  -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <mysql.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((MYSQL*)0)->net.vio - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &s);
+11:   }
+12: 
+13:   return 0;
+14: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for MYSQL.net.pvio in mysql.h... -------------------- no
+
+"gcc -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT -m64  -c conftest.c"
+conftest.c:6:34: 错误：‘NET’没有名为‘pvio’的成员
+ int s = (char *)&((MYSQL*)0)->net.pvio - (char *)0;
+                                  ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <mysql.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((MYSQL*)0)->net.pvio - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &s);
+11:   }
+12: 
+13:   return 0;
+14: }
+/* end */
+
+--------------------
+
+have_const: checking for MYSQL_ENABLE_CLEARTEXT_PLUGIN in mysql.h... -------------------- yes
+
+"gcc -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT -m64  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)MYSQL_ENABLE_CLEARTEXT_PLUGIN;
+/* end */
+
+--------------------
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Weverything -lpthread -lrt -ldl -lcrypt -lm   -lc"
+gcc: 错误：unrecognized command line option ‘-Weverything’
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-bad-function-cast -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-conditional-uninitialized -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-covered-switch-default -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-declaration-after-statement -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-disabled-macro-expansion -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-documentation-unknown-command -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-missing-field-initializers -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-missing-variable-declarations -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-padded -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-reserved-id-macro -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-sign-conversion -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-static-in-inline -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-switch-enum -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-undef -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-unreachable-code -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby -Werror -Wno-used-but-marked-unused -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -I/usr/include/mysql    -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -mtune=generic -fPIC -DNO_SSL_MODE_SUPPORT -Wno-bad-function-cast -Wno-conditional-uninitialized -Wno-covered-switch-default -Wno-declaration-after-statement -Wno-disabled-macro-expansion -Wno-documentation-unknown-command -Wno-missing-field-initializers -Wno-missing-variable-declarations -Wno-padded -Wno-reserved-id-macro -Wno-sign-conversion -Wno-static-in-inline -Wno-switch-enum -Wno-undef -Wno-unreachable-code -Wno-used-but-marked-unused conftest.c  -L. -L/usr/lib64 -L. -Wl,-z,relro -fstack-protector -rdynamic -Wl,-export-dynamic  -m64  -L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -lssl -lcrypto -ldl  -lruby  -Wl,-rpath,/usr/lib64/mysql -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
