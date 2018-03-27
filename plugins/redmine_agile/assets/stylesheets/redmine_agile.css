@@ -8,7 +8,7 @@
 /* FULLSCREEN
 /**********************************************************************/
 html {
-  overflow-y: inherit !important;
+#  overflow-y: inherit !important;
 }
 html.agile-board-fullscreen {
   overflow: hidden;
